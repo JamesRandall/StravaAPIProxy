@@ -6,12 +6,14 @@ This minimal NodeJS server provides a CORS enabled proxy for the Strava API and 
 
 Getting started is simple.
 
-1. Open app.js and set the stravaClientId and stravaClientSecret constants to the values provided by Strava for your application.
+1. Open app.js and set the stravaClientId and stravaClientSecret constants to the values provided by Strava for your application though see the note below for deploying in production.
 2. Install the required npm package: npm install
 3. Run it: npm start
 4. By default it will attach to port 3100 so in a browser just navigate to http://localhost:3100 to ensure its running
 
 If you use Visual Studio Code I've included a launch.json file so you can just hit F5 (after installing npm dependencies) to run and debug.
+
+If you're deploying this into a production environment the server can optionally read the client ID and secret from environment variables called stravaClientId and stravaClientSecret. If you're deploying into Azure you should set these in the app settings area of the portal.
 
 ## Token translation
 
