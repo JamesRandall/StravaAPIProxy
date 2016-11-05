@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
 // routes
-app.use('/', home)
+app.use('/', home(stravaClientId))
 app.use('/tokenexchange', tokenExchange(stravaClientId, stravaClientSecret))
 app.use('/strava', proxy('www.strava.com', {
     decorateRequest: function(proxyReq, originalReq) {
