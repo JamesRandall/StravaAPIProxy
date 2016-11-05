@@ -8,8 +8,8 @@ const tokenExchange = require('./routes/tokenExchange')
 const home = require('./routes/index')
 const app = express()
 
-const stravaClientId = 'yourid' // for example '12345'
-const stravaClientSecret = 'yoursecret' // for example '9876fe547238c1324bd...'
+const stravaClientId = process.env.stravaClientId || 'yourid' // for example '12345'
+const stravaClientSecret = process.env.stravaClientSecret || 'yoursecret' // for example '9876fe547238c1324bd...'
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
